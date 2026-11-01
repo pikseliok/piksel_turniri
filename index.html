@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
 <meta name="theme-color" content="#9DC3FF">
-<title>πksel - Breyn Rinq səsli otaq</title>
+<title>πksel turniri</title>
 <link rel="icon" type="image/png" href="https://cdn.phototourl.com/member/2026-10-03-7c990532-b6d4-4529-87ea-f322379e1f97.png">
 <link rel="apple-touch-icon" href="https://cdn.phototourl.com/member/2026-10-03-7c990532-b6d4-4529-87ea-f322379e1f97.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,24 +33,6 @@ a{color:inherit;text-decoration:none}
 .card>*,.tcard>*{position:relative;z-index:1}
 .card::before,.tcard::before{content:"";position:absolute;inset:0;z-index:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .4s ease;background:radial-gradient(ellipse 170px 120px at var(--mx,50%) var(--my,50%),var(--glow),transparent 72%),radial-gradient(ellipse 100px 150px at calc(var(--mx,50%) + 16px) calc(var(--my,50%) - 12px),var(--glow),transparent 72%)}
 @media (hover:hover){.card:hover::before,.tcard:hover::before{opacity:1}}
-.top-nav{height:50px;width:100%;border-radius:40px;padding:0 52px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--deep) 0,var(--bright) 50%,var(--deep) 100%);box-shadow:0 10px 28px rgba(0,20,100,.08);transition:background var(--transition)}
-.dark .top-nav{background:linear-gradient(135deg,var(--dark-light) 0,var(--dark-bright) 50%,var(--dark-light) 100%)}
-.nav-links{display:flex;align-items:center;justify-content:center;gap:40px;height:100%}
-.nav-link{position:relative;color:var(--ink);font-size:15px;font-weight:500;white-space:nowrap;transition:transform .25s ease}
-.dark .nav-link{color:var(--dark-ink)}
-.nav-link:hover{transform:translateY(-1px)}
-.theme-toggle{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:38px;height:38px;border:0;border-radius:50%;overflow:hidden;cursor:pointer;display:grid;place-items:center;color:var(--deep);background:rgba(157,195,255,.98);transition:transform .3s ease,background var(--transition),color var(--transition)}
-.dark .theme-toggle{background:var(--dark-bg);color:var(--dark-light)}
-.theme-toggle:hover{transform:translateY(-50%) scale(1.08)}
-.theme-toggle:active{transform:translateY(-50%) scale(.95)}
-.theme-icon{width:24px;height:24px;display:block}
-.ray{stroke:currentColor;stroke-width:2;stroke-linecap:round}
-body.dark .ray{opacity:0}
-.core{transform:scale(.68);transform-origin:16px 16px}
-.bite{transform:translate(14px,-14px)}
-body.dark .core{transform:scale(1)}
-body.dark .bite{transform:translate(0,0)}
-body.ready .bite,body.ready .core{transition:transform .6s cubic-bezier(.4,0,.2,1)}
 h1{text-align:center;color:var(--deep);font-size:var(--t);font-weight:700;line-height:1.3;letter-spacing:-.7px;margin:24px 0 14px;white-space:nowrap}
 .dark .note,.dark h1{color:var(--dark-light)}
 .note{color:var(--deep);text-align:center;font-size:var(--b);font-weight:500;margin-top:8px;line-height:1.4}
@@ -81,18 +63,13 @@ input{width:100%;border:0;border-radius:20px;padding:10px 16px;margin-top:10px;b
 .mini:active,.pbtn:not(:disabled):active,.pill:active{transform:scale(.96);transition-duration:.2s}
 .tcard{margin-top:12px;border-radius:22px;padding:12px 18px;background:linear-gradient(135deg,var(--deep),var(--bright) 49%,var(--deep));color:var(--ink);box-shadow:0 10px 25px rgba(0,20,110,.07);transition:background var(--transition)}
 .dark .tcard{background:linear-gradient(135deg,var(--dark-light),var(--dark-bright) 49%,var(--dark-light));color:var(--dark-ink)}
-footer{width:100%;background:linear-gradient(100deg,var(--deep) 0,var(--bright) 50%,var(--deep) 100%);color:var(--ink);min-height:110px;padding:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;transition:background var(--transition),color var(--transition);flex-shrink:0}
-.dark footer{background:linear-gradient(164deg,var(--dark-light) 0,var(--dark-bright) 50%,var(--dark-light) 100%);color:var(--dark-ink)}
-.footer-line{font-size:15px;line-height:1.4;font-weight:500}
-.footer-link{transition:opacity .25s ease,transform .25s ease}
-.footer-link:hover{opacity:.72;transform:translateY(-1px)}
 .copy-code{display:inline-flex;border:0;cursor:pointer;color:inherit;background:0 0;font-family:Poppins,sans-serif;transition:opacity .2s ease,transform .2s ease}
 .copy-code:hover{opacity:.75;transform:translateY(-1px)}
 :focus-visible{outline:3px solid currentColor;outline-offset:4px}
 @media (prefers-reduced-motion:reduce){*,::after,::before{scroll-behavior:auto!important;animation-duration:0s!important;transition-duration:0s!important}}
 @media(min-width:701px){#lobby{width:100%;max-width:540px;margin:30px auto 32px;padding:24px 30px 26px}}
-@media(max-width:700px){:root{--t:17px;--b:9px;--c:11px}.page{width:calc(100vw - 44px);padding-top:11px}#game{margin-top:12px}.top-nav{height:46px;padding:0 46px}.nav-links{gap:28px}.nav-link{font-size:13px}.theme-toggle{width:34px;height:34px;right:6px}.theme-icon{width:21px;height:21px}h1{margin:20px 0 12px}.card{border-radius:22px;padding:18px 16px}.pill{height:44px}footer{min-height:96px;padding:16px 12px;gap:5px}.footer-line{font-size:13px}}
-@media(max-width:420px){:root{--t:15px;--b:8px;--c:10px}.page{width:calc(100vw - 36px)}.nav-links{gap:22px}.nav-link{font-size:11px}.top-nav{height:42px;padding:0 42px}.theme-toggle{width:32px;height:32px;right:5px}.theme-icon{width:20px;height:20px}.card{padding:16px 14px}.pill{height:42px}footer{min-height:88px}.footer-line{font-size:11px}}
+@media(max-width:700px){:root{--t:17px;--b:9px;--c:11px}.page{width:calc(100vw - 44px);padding-top:11px}#game{margin-top:12px}h1{margin:20px 0 12px}.card{border-radius:22px;padding:18px 16px}.pill{height:44px}}
+@media(max-width:420px){:root{--t:15px;--b:8px;--c:10px}.page{width:calc(100vw - 36px)}.card{padding:16px 14px}.pill{height:42px}}
 .row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:6px}
 .tm{display:flex;justify-content:center;align-items:flex-start;font-variant-numeric:tabular-nums;font-weight:600;line-height:1.1}
 .t-sec{min-width:2ch;text-align:right}
@@ -171,6 +148,19 @@ body.dark{--grad:linear-gradient(135deg,var(--dark-light),var(--dark-bright) 50%
 .volbar{display:flex;align-items:center;gap:12px;width:100%;height:46px;border-radius:999px;padding:0 20px;margin-top:14px;background:var(--grad);color:var(--ink);box-shadow:0 10px 25px rgba(0,20,110,.07)}
 .dark .volbar{color:var(--dark-ink)}
 .volbar svg{width:20px;height:20px;flex:0 0 20px}
+.actrow{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-top:14px}
+.abtn{display:grid;place-items:center;width:100%;height:46px;border:0;border-radius:999px;padding:0;background:var(--grad);color:var(--ink);cursor:pointer;box-shadow:0 10px 25px rgba(0,20,110,.07);transition:transform .25s ease}
+.dark .abtn{color:var(--dark-ink)}
+.abtn:hover{transform:translateY(-2px)}
+.abtn:active{transform:scale(.96);transition-duration:.2s}
+.abtn svg{width:26px;height:26px;display:block}
+.ray{stroke:currentColor;stroke-width:2;stroke-linecap:round}
+body.dark .ray{opacity:0}
+.core{transform:scale(.68);transform-origin:16px 16px}
+.bite{transform:translate(14px,-14px)}
+body.dark .core{transform:scale(1)}
+body.dark .bite{transform:translate(0,0)}
+body.ready .bite,body.ready .core{transition:transform .6s cubic-bezier(.4,0,.2,1)}
 .kick-btn{position:absolute;top:7px;right:7px;width:22px;height:22px;min-width:22px;border-radius:50%;padding:0;margin:0;font-size:11px;font-weight:800;line-height:20px;cursor:pointer;border:1.5px solid rgba(255,255,255,.85);background:0 0;color:#fff;display:flex;align-items:center;justify-content:center}
 .mr .kick-btn{position:static;flex:none}
 .kick-btn:active{transform:scale(.9)}
@@ -196,28 +186,9 @@ body.dark{--grad:linear-gradient(135deg,var(--dark-light),var(--dark-bright) 50%
 </head>
 <body>
 <div class="page">
-<nav aria-label="Əsas naviqasiya" class="frame top-nav" style="--i:0">
-<div class="rise nav-links"><a class="nav-link" href="index.html">Əsas Səhifə</a> <a class="nav-link" href="contact.html">Bizimlə Əlaqə</a></div>
-<button class="theme-toggle" type="button" aria-label="Rejimi dəyiş" id="themeToggle">
-<svg aria-hidden="true" viewBox="0 0 32 32" class="rise theme-icon" id="themeIcon">
-<defs><mask height="32" id="biteMask" maskUnits="userSpaceOnUse" width="32" x="0" y="0"><rect height="32" width="32" fill="#fff"/><circle class="bite" cx="21" cy="11" fill="#000" r="7.5"/></mask></defs>
-<g class="rays">
-<g transform="rotate(0 16 16)"><line class="ray" x1="16" x2="16" y1="3.5" y2="6.5"/></g>
-<g transform="rotate(45 16 16)"><line class="ray" x1="16" x2="16" y1="3.5" y2="6.5"/></g>
-<g transform="rotate(90 16 16)"><line class="ray" x1="16" x2="16" y1="3.5" y2="6.5"/></g>
-<g transform="rotate(135 16 16)"><line class="ray" x1="16" x2="16" y1="3.5" y2="6.5"/></g>
-<g transform="rotate(180 16 16)"><line class="ray" x1="16" x2="16" y1="3.5" y2="6.5"/></g>
-<g transform="rotate(225 16 16)"><line class="ray" x1="16" x2="16" y1="3.5" y2="6.5"/></g>
-<g transform="rotate(270 16 16)"><line class="ray" x1="16" x2="16" y1="3.5" y2="6.5"/></g>
-<g transform="rotate(315 16 16)"><line class="ray" x1="16" x2="16" y1="3.5" y2="6.5"/></g>
-</g>
-<g mask="url(#biteMask)"><circle class="core" cx="16" cy="16" fill="currentColor" r="9"/></g>
-</svg>
-</button>
-</nav>
 
 <section class="card frame" id="lobby" style="--i:1">
-<div class="rise big center">"Breyn Rinq"<br>Səsli otaq</div>
+<div class="rise big center">πksel turniri</div>
 <button class="rise pill" data-m="host">APARICI</button>
 <button class="rise pill" data-m="cap">KAPİTAN</button>
 <button class="rise pill" data-m="pl">OYUNÇU</button>
@@ -232,7 +203,7 @@ body.dark{--grad:linear-gradient(135deg,var(--dark-light),var(--dark-bright) 50%
 </section>
 
 <div id="game" hidden>
-<h1>"Breyn Rinq" Səsli otaq</h1>
+<h1>πksel turniri</h1>
 <section class="card center" id="head"></section>
 <div id="top"></div>
 <div id="hostp"></div>
@@ -255,17 +226,15 @@ body.dark{--grad:linear-gradient(135deg,var(--dark-light),var(--dark-bright) 50%
 <input id="vol2" aria-label="Oyun daxili səslər (düymə, vaxt, falstart)" max="100" min="0" step="1" type="range" value="50">
 <svg aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="M3 9.5v5h4l5 4v-13l-5 4H3z" fill="currentColor"/><path d="M15.5 9.5a4 4 0 0 1 0 5M18 7a8 8 0 0 1 0 10" stroke-width="2" stroke="currentColor" stroke-linecap="round"/></svg>
 </div>
+<div class="actrow">
+<button class="abtn" type="button" id="exitBtn" aria-label="Oyundan çıx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M6 21V5a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v16"/><path d="M6 21l8-2V7L6 5z"/><circle cx="11.5" cy="13" r=".7" fill="currentColor"/></svg></button>
+<button class="abtn" type="button" id="themeToggle" aria-label="Rejimi dəyiş"><svg viewBox="0 0 32 32" aria-hidden="true"><defs><mask height="32" id="biteMask" maskUnits="userSpaceOnUse" width="32" x="0" y="0"><rect height="32" width="32" fill="#fff"/><circle class="bite" cx="21" cy="11" fill="#000" r="7.5"/></mask></defs><g class="rays"><g transform="rotate(0 16 16)"><line class="ray" x1="16" x2="16" y1="3.5" y2="6.5"/></g><g transform="rotate(45 16 16)"><line class="ray" x1="16" x2="16" y1="3.5" y2="6.5"/></g><g transform="rotate(90 16 16)"><line class="ray" x1="16" x2="16" y1="3.5" y2="6.5"/></g><g transform="rotate(135 16 16)"><line class="ray" x1="16" x2="16" y1="3.5" y2="6.5"/></g><g transform="rotate(180 16 16)"><line class="ray" x1="16" x2="16" y1="3.5" y2="6.5"/></g><g transform="rotate(225 16 16)"><line class="ray" x1="16" x2="16" y1="3.5" y2="6.5"/></g><g transform="rotate(270 16 16)"><line class="ray" x1="16" x2="16" y1="3.5" y2="6.5"/></g><g transform="rotate(315 16 16)"><line class="ray" x1="16" x2="16" y1="3.5" y2="6.5"/></g></g><g mask="url(#biteMask)"><circle class="core" cx="16" cy="16" fill="currentColor" r="9"/></g></svg></button>
+</div>
 <div id="talkbox"></div>
 </div>
 <div class="note" id="net"></div>
 </div>
 </div>
-
-<footer>
-<div class="footer-line">Unikal İntellektual Oyunlar Platforması</div>
-<a class="footer-line footer-link" href="https://www.instagram.com/piksel.iok" rel="noopener noreferrer" target="_blank">©πksel intellektual oyunlar klubu</a>
-<a class="footer-line footer-link" href="https://www.instagram.com/onurelzh" rel="noopener noreferrer" target="_blank">©Onur Əlizadə</a>
-</footer>
 
 <div class="kick-overlay" id="kickOverlay">
 <div class="kick-modal" id="kickModal">
@@ -287,7 +256,7 @@ MAX_TEAM=6,MIN_TEAM=1;
 let pid=null;
 try{pid=sessionStorage.getItem("piksel-br-pid")}catch(e){}
 if(!pid){pid="p"+rnd(8);try{sessionStorage.setItem("piksel-br-pid",pid)}catch(e){}}
-let mode="host",room=null,role=null,R=null,entered=false,noPrompt=0,busy=false;
+let leaving=0,mode="host",room=null,role=null,R=null,entered=false,noPrompt=0,busy=false;
 window.addEventListener("beforeunload",e=>{if(room&&!noPrompt){e.preventDefault();e.returnValue=""}});
 
 const rays=[...document.querySelectorAll(".ray")];
@@ -382,6 +351,7 @@ function listen(){
   try{sessionStorage.setItem("piksel-br-sess",JSON.stringify({room:room,role:role}))}catch(e){}
   presence();
   db.ref("rooms/"+room).on("value",snap=>{
+    if(leaving)return;
     const v=snap.val();
     if(!v){
       leaveClean();
@@ -395,6 +365,32 @@ function listen(){
     alert("Əlaqə kəsildi");noPrompt=1;location.reload();
   });
 }
+
+function leaveGame(){
+  if(!room||!R||leaving)return;
+  if(!confirm(role==="host"?"Oyundan çıxmaq istəyirsiniz? Otaq bağlanacaq və geri qayıda bilməyəcəksiniz.":"Oyundan çıxmaq istəyirsiniz? Bir daha geri qayıda bilməyəcəksiniz."))return;
+  leaving=1;noPrompt=1;
+  const r=room,done=()=>{try{sessionStorage.removeItem("piksel-br-sess")}catch(e){}location.reload()};
+  try{
+    if(role==="host"){
+      db.ref("rooms/"+r+"/hostOff").onDisconnect().cancel();
+      Promise.all([db.ref("rooms/"+r).remove(),db.ref("sig/"+r).remove(),db.ref("rx/"+r).remove()]).catch(()=>{}).then(done);
+    }else{
+      leaveClean();
+      const tid=(P()[pid]||{}).team,up={};
+      up["players/"+pid]=null;
+      if(R.talk===pid)up.talk=null;
+      if(R.speaker===pid)up.speaker=null;
+      if(tid&&members(tid).filter(m=>m.id!==pid).length===0){
+        up["teams/"+tid]=null;
+        ["fs","fst","wrong"].forEach(x=>{up[x+"/"+tid]=null});
+        if(["running","answered","expired"].includes(R.status))Object.assign(up,{status:"wait",winner:null,speaker:null,timerEnd:null,pausedMs:null,startedAt:null,buzzAt:null,first:null,sil:null,rd:null,ev:null});
+      }
+      rf().update(up).catch(()=>{}).then(done);
+    }
+  }catch(e){done()}
+}
+$("exitBtn").onclick=leaveGame;
 
 function intro(){
   let i=1;
@@ -1221,7 +1217,6 @@ render=function(){
   }else if(pshown)hideNp();
 };
 </script>
-
 <script>
 /* ===== Ehtiyat kapitan (E.K), oflayn izləmə, arxa plan və avtomatik qayıdış ===== */
 const OFF_GRACE=8*1000;
@@ -1400,6 +1395,5 @@ document.addEventListener("pointerdown",keepAwake,{passive:true});
   }catch(e){}
 })();
 </script>
-<script src="/footer.js"></script>
 </body>
 </html>
